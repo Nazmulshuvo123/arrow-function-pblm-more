@@ -4,6 +4,7 @@ const people = [
     { name: 'Akil', age: 26 },
     { name: 'Asifa', age: 29 },
 ]
+//Using for of loop
 let sum = 0;
 for(const item of people){
     // console.log(item.age);
@@ -11,6 +12,10 @@ for(const item of people){
 }
 console.log(sum);
 
-const total = people.map((person) => person.age).reduce((previous, current) => previous + current, 0)
+//using map and reduce
+
+const age = people.map((person) => person.age);
+console.log(age);
+const total = age.reduce((previous, current) => previous + current, 0)
 
 console.log(total)
